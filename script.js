@@ -758,309 +758,545 @@
 
 // // function one(parameter){
 // //     // statement
-// //     // return
-// //     // yeild
+// // //     // return
+// // //     // yeild
+// // // }
+
+
+// // // one(arguments)
+
+
+
+
+// // function one(){
+// //     console.log("hello");
+
+// //     if(1){
+// //         console.log("welcome");
+        
+// //     }
+
+// //     for(let a = 1 ; a<=5; a++){
+// //         console.log(a++);
+        
+// //     }
+    
 // // }
 
 
-// // one(arguments)
+
+// // function two(a){
+// //     console.log(a);
+    
+// // }
+
+// // // two(1)
+
+
+// // function clgForm(name,age,cgpa){
+// //     console.log("name",name);
+// //     console.log("age",age);
+// //     console.log("cgpa",cgpa);
+    
+// // }
+
+// // // clgForm("aswin",23,9)
+// // // clgForm("sarath",22,8.5)
+
+
+
+// // // return
+
+
+// // function form(studentFee){
+
+// //     return studentFee // 200000
+
+// // }
+
+// // let fee = form(200000)
+
+// // console.log(fee);
+
+// // function discount(percent){
+// //    console.log(percent,"%");
+
+// //    let percentAmount = (200000/100*percent);
+
+// //    console.log("student pay fee :", fee-percentAmount);
+   
+
+   
+
+// // }
+
+// // discount(5)
 
 
 
 
-// function one(){
-//     console.log("hello");
+// // function three(a){
+// //     return a // 5
+// // }
 
-//     if(1){
-//         console.log("welcome");
+// // console.log(three(5))
+
+
+
+// // // let data = {
+// // //     name1 : "john",
+// // //     age   : 22
+// // // }
+
+// // // function hi(age){
+
+// // //     console.log(data.name1);
+// // //     console.log(age);
+    
+    
+
+// // // }
+
+// // // hi(50)
+
+// // // console.log(data.name1);
+// // // console.log(age);
+
+
+
+
+// // // types of function
+
+
+// // // named function 
+// // named("named function")
+
+// // function named(parameter){
+// //     console.log(parameter);
+    
+// // }
+
+
+// // // annonymous function
+
+
+// // var annoymous = function(parameter){
+// //     console.log(parameter);
+    
+// // }
+
+// // annoymous("Annonymous function")
+
+// // // arrow function
+
+// // var arrow = (parameter)=>{
+// //     console.log(parameter);
+    
+// // }
+
+// // arrow("arrow function")
+
+
+
+
+
+// // // // scope 
+
+// // // function scopeCheck(){
+// // //     if(5){
+// // //         var z1 = "global scope";
+// // //         let z2 = "block scope";
+// // //         const z3 = "block scope";
         
-//     }
+// // //     }
+    
+    
+// // // }
 
-//     for(let a = 1 ; a<=5; a++){
-//         console.log(a++);
-        
-//     }
+// // // scopeCheck()
+
+
+// // // // hoisting
+
+// // // console.log(y1);
+
+// // // var y1 = 5
+
+
+
+
+// // // let y2 = 10
+
+// // // console.log(y2);
+
+
+// // // console.log(y3);
+
+// // // const y3 = 15
+
+
+
+// // // iife (self invoke funtion)
+
+
+// // (function(product,discount){
+// //     alert(`now sale is going on, here ${product} is huge discount ${discount}%`)
+// // })("shirt",20)
+
+
+// // callback function , higher order function
+
+
+// function three(){
+//     console.log("higher order function");
+    
+// }
+
+// function four(){
+//     console.log("callback fucntion");
+    
+// }
+
+// three(four())
+
+
+
+// // example :- 
+
+
+// let add = function(callback,a,b){ // callback = sub , a = 20 , b = 40
+//     console.log(a+b);             //  20 + 40 = 60
+//     callback(20,20)               //  sub(20,20)
     
 // }
 
 
+// let sub = (num1,num2)=>{ // num1 = 20, num2 = 20
 
-// function two(a){
+//     console.log(num1-num2); // 20 - 20 = 0
+    
+
+// }
+
+
+
+// add(sub,20,40)  // -20, 60. // -20,40 // 0,60 // 60,0.
+
+
+
+
+// // generator function 
+
+
+// function* gen(){
+//     yield "10% cashback"
+//     yield "30% cashback"
+//     yield "better luck next time"
+//     yield "100% cashback"
+//     yield "7% cashback"
+//     yield "1% cashback"
+// }
+
+// let newGen = gen()
+
+// // console.log(newGen.next());
+// // console.log(newGen.next());
+// // console.log(newGen.next());
+// // console.log(newGen.next());
+// // console.log(newGen.next());
+// // console.log(newGen.next());
+// // console.log(newGen.next().done);
+
+// // if(newGen.next().done){
+// //     console.log("the value all is done");
+    
+// // }
+
+
+// for(let a of newGen){
 //     console.log(a);
     
 // }
 
-// // two(1)
 
 
-// function clgForm(name,age,cgpa){
+// // default parameter
+
+
+// function form1(name , age , disability = "no"){
+
 //     console.log("name",name);
 //     console.log("age",age);
-//     console.log("cgpa",cgpa);
+//     console.log("disability",disability);
     
-// }
-
-// // clgForm("aswin",23,9)
-// // clgForm("sarath",22,8.5)
-
-
-
-// // return
-
-
-// function form(studentFee){
-
-//     return studentFee // 200000
 
 // }
 
-// let fee = form(200000)
-
-// console.log(fee);
-
-// function discount(percent){
-//    console.log(percent,"%");
-
-//    let percentAmount = (200000/100*percent);
-
-//    console.log("student pay fee :", fee-percentAmount);
-   
-
-   
-
-// }
-
-// discount(5)
+// form1("ajith",25,"no")
+// form1("arun",24,"yes")
+// form1("dinesh",27,)
 
 
 
+// // uncurrying format
 
-// function three(a){
-//     return a // 5
-// }
-
-// console.log(three(5))
-
-
-
-// // let data = {
-// //     name1 : "john",
-// //     age   : 22
-// // }
-
-// // function hi(age){
-
-// //     console.log(data.name1);
-// //     console.log(age);
-    
-    
-
-// // }
-
-// // hi(50)
-
-// // console.log(data.name1);
-// // console.log(age);
-
-
-
-
-// // types of function
-
-
-// // named function 
-// named("named function")
-
-// function named(parameter){
-//     console.log(parameter);
+// function five(a,b,c){
+//     console.log(a+b+c);
     
 // }
 
+// five(1,2,3)
 
-// // annonymous function
 
+// // currying format
 
-// var annoymous = function(parameter){
-//     console.log(parameter);
-    
-// }
-
-// annoymous("Annonymous function")
-
-// // arrow function
-
-// var arrow = (parameter)=>{
-//     console.log(parameter);
-    
-// }
-
-// arrow("arrow function")
-
-
-
-
-
-// // // scope 
-
-// // function scopeCheck(){
-// //     if(5){
-// //         var z1 = "global scope";
-// //         let z2 = "block scope";
-// //         const z3 = "block scope";
-        
-// //     }
-    
-    
-// // }
-
-// // scopeCheck()
-
-
-// // // hoisting
-
-// // console.log(y1);
-
-// // var y1 = 5
-
-
-
-
-// // let y2 = 10
-
-// // console.log(y2);
-
-
-// // console.log(y3);
-
-// // const y3 = 15
-
-
-
-// // iife (self invoke funtion)
-
-
-// (function(product,discount){
-//     alert(`now sale is going on, here ${product} is huge discount ${discount}%`)
-// })("shirt",20)
-
-
-// callback function , higher order function
-
-
-function three(){
-    console.log("higher order function");
-    
-}
-
-function four(){
-    console.log("callback fucntion");
-    
-}
-
-three(four())
-
-
-
-// example :- 
-
-
-let add = function(callback,a,b){ // callback = sub , a = 20 , b = 40
-    console.log(a+b);             //  20 + 40 = 60
-    callback(20,20)               //  sub(20,20)
-    
-}
-
-
-let sub = (num1,num2)=>{ // num1 = 20, num2 = 20
-
-    console.log(num1-num2); // 20 - 20 = 0
-    
-
-}
-
-
-
-add(sub,20,40)  // -20, 60. // -20,40 // 0,60 // 60,0.
-
-
-
-
-// generator function 
-
-
-function* gen(){
-    yield "10% cashback"
-    yield "30% cashback"
-    yield "better luck next time"
-    yield "100% cashback"
-    yield "7% cashback"
-    yield "1% cashback"
-}
-
-let newGen = gen()
-
-// console.log(newGen.next());
-// console.log(newGen.next());
-// console.log(newGen.next());
-// console.log(newGen.next());
-// console.log(newGen.next());
-// console.log(newGen.next());
-// console.log(newGen.next().done);
-
-// if(newGen.next().done){
-//     console.log("the value all is done");
-    
-// }
-
-
-for(let a of newGen){
-    console.log(a);
-    
-}
-
-
-
-// default parameter
-
-
-function form1(name , age , disability = "no"){
-
-    console.log("name",name);
-    console.log("age",age);
-    console.log("disability",disability);
-    
-
-}
-
-form1("ajith",25,"no")
-form1("arun",24,"yes")
-form1("dinesh",27,)
-
-
-
-// uncurrying format
-
-function five(a,b,c){
-    console.log(a+b+c);
-    
-}
-
-five(1,2,3)
-
-
-// currying format
-
-function five1(a){
-    return function(b){
-        return function(c){
-            console.log(a+b+c);
+// function five1(a){
+//     return function(b){
+//         return function(c){
+//             console.log(a+b+c);
             
-        }
+//         }
+//     }
+// }
+
+
+// five1(1)(2)(3)
+
+
+
+// console.clear()
+
+
+// // DataStracture 
+
+// // Es - 6 :- ecma script
+
+
+// // spread operator 
+
+// // array spread operator - [...]
+
+// let arr1 = [1,2,3,4]
+// let arr2 = [5,6,7,8]
+
+
+// let totalArr = [...arr1,...arr2]
+
+// console.log(totalArr);
+
+
+// // object spread operator - {...}
+
+// let obj1 = {
+//     name1 : "a",
+//     role  : "trinee",
+//     experiance : "fresher"
+// }
+
+// let obj2 = {
+//     name11 : "b",
+//     role1  : "developer",
+//     experiance1 : 2
+// }
+
+// let totalObj = {...obj1,...obj2}
+
+// console.log(totalObj);
+
+
+// // rest operator - (...) 
+
+// // function 
+
+// function one(a,b,...c){
+
+//     console.log(a+b+c[0]+c[1]);
+//   console.log(c);
+     
+
+// }
+
+// one(1,2,3,4,5,6,7,8,9)
+
+
+
+
+// // destracture 
+
+
+// let nested = [1,2,[3,4,[5,6,[7]]]]
+
+
+// console.log(nested[0],nested[1],nested[2][0],nested[2][1],nested[2][2][0],nested[2][2][1],nested[2][2][2][0]);
+
+
+// let [d1,d2,[d3,d4,[d5,d6,[d7]]]] = nested
+
+// console.log(d1,d2,d3,d4,d5,d6,d7);
+
+
+
+// // object destracture 
+
+
+let objVal = {
+    name : "ab",
+    role : "developer",
+    location : {
+        mainLocation : "salem",
+        currentLocation : "bangalore"
     }
 }
 
 
-five1(1)(2)(3)
+
+console.log(objVal.name);
+console.log(objVal.location.currentLocation);
+
+
+let {name,role,location:{mainLocation,currentLocation}} = objVal
+
+console.log(currentLocation,name,role,mainLocation);
+
+
+console.clear();
+
+
+
+// Array advance concept
+
+
+let array = [1,2,3,4,5,"hello",true,undefined,null,[1,2],{k:3}]
+
+
+console.log(array);
+console.log(array[0]);
+console.log(array[array.length-1]);
+
+
+// homogeneous
+// hetrogeneous
+// flexible
+
+
+
+// Array manipulation method 
+
+// adding method - u can add multiple value.
+// remove method - u can only remove one value.
+
+let ab = [1,2,3,4]
+// pop() - u can remove the value array last
+ab.pop()
+// push() - u can add the value array last
+ab.push(4,5,6,7,8,9)
+
+// shift() - u can remove the value array first
+ab.shift()
+
+// unshift() - u can add the value array first
+
+ab.unshift(0,1)
+
+console.log(ab);
+
+
+// splice() // startingIndex , removeCount , AddValue
+
+let cd = [1,2,3,40,50,60,7,8,9]
+
+cd.splice(6,3,70,80,90)
+
+console.log(cd);
+
+
+// fill()
+
+
+let ef = [1,2,3,4]//1,2,3,"four"
+
+ef.fill("four",3,4) // "value", sI , eI + 1
+
+console.log(ef);
+
+
+
+
+// Array merge method:- 
+
+
+
+// concat(), 
+
+let a1 = [1,2,3]
+let a2 = [4,5,6]
+
+let total = a1.concat(a2,7,8,9)
+
+console.log(total);
+
+
+// slice(), // si , ei + 1
+
+let a3 = [1,2,3,4,5,6,7,8]
+
+console.log(a3.slice(2,5));
+console.clear();
+
+
+// flat(), 
+
+let nested1 = [1,2,[3,4,[5,6,[7]]]]
+
+console.log(nested1.flat(Infinity));
+
+
+
+// includes(), 
+
+let fe = [1,54,67,3,22,87,9,11]
+
+console.log(fe.includes(31));
+
+
+
+
+
+// indexOf(), 
+
+let gd = [1,2,3,4,5,4,3,2,1]
+
+console.log(gd.indexOf(4,4));
+
+
+// lastIndexOf(), 
+
+console.log(gd.lastIndexOf(2,5));
+
+
+
+// sort(), 
+
+
+let jd = [3,6,2,1,7,9,0,8] // ascii value
+// 20000 = 2.0000 ; 2.0000 < 3 = true
+
+console.log(jd.sort());
+
+
+
+// reverse()
+
+console.log(jd.reverse());
+
+
+
+
+
+
+
+
+
 
 
 
