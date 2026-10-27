@@ -1291,6 +1291,389 @@ console.log(jd.reverse());
 
 
 
+console.clear();
+
+
+let num = [1,2,3,4]
+
+
+console.log(num[0]+1);
+
+
+// array higher order method
+
+
+// forEach
+
+let newForEach = num.forEach((currentElement,indexNum,TotalArray)=>{
+    return(currentElement);
+   
+ 
+})
+
+console.log(newForEach);
+
+
+
+// map 
+
+let newMap = num.map((c,i,t)=>{
+    return(c);
+    
+    
+})
+
+console.log(newMap);
+
+
+// filter 
+
+let employee = [
+    {name : "a", salary : 100000},
+    {name : "b", salary : 500000},
+    {name : "c", salary : 200000},
+    {name : "d", salary : 103000},
+    {name : "e", salary : 900000},
+    {name : "f", salary : 700000}
+]
+
+let newFilter = employee.filter((c,i,t)=>{
+    return c.salary <= 300000
+})
+
+console.log(newFilter);
+
+
+
+// find 
+
+let newFind = employee.find((c,i,t)=>{
+    return c.salary <= 300000
+})
+
+console.log(newFind);
+
+
+// reduce 
+
+
+employee = [
+    {name : "a", salary : 100000},
+    {name : "b", salary : 500000},
+    {name : "c", salary : 200000},
+    {name : "d", salary : 103000},
+    {name : "e", salary : 900000},
+    {name : "f", salary : 700000}
+]
+
+
+let newReduce = employee.reduce((acc,c,i,t)=>{
+    return acc + c.salary
+
+
+    //     0 + 1 = 1
+    //     1 + 5 = 6
+    //     6 + 2 = 8
+    //     8 + 1 = 9
+    //     9 + 9 = 18
+    //     18 + 7 = 25
+    //     25 + null = 253000
+},0) // 1 // 6 // 8 // 9 // 18 // 25
+
+console.log(newReduce);
+
+
+
+// some  - or 
+
+let someArr = [1,2,3,4]
+
+let someVAl = someArr.some((c,i,t)=>{
+    return c % 2 == 0
+        // 1 % 2 == 0 false
+        // 2 % 2 == 0 true
+        // 3 % 2 == 0 false 
+        // 4 % 2 == 0 true
+
+        // false || true || false || true = true
+})
+
+console.log(someVAl);
+
+
+// every - AND
+
+let everyArr = [2,4,6,8]
+
+let everyVal = everyArr.every((c,i,t)=>{
+    return c % 2 == 0
+
+    //     0 % 2 == 0 true
+    //     1 % 2 == 0 false
+})
+
+console.log(everyVal);
+
+
+// sort
+
+
+let sortArr = [1,65,78,45000,23,0,239]
+
+console.log(sortArr.sort());
+
+
+let newSort = sortArr.sort((a,b)=>{
+    return b-a
+})
+
+console.log(newSort);
+
+
+
+
+// convertion  arr to str
+
+
+// toString()
+
+let arr = [1,2,3,4]
+
+console.log(arr.toString());
+
+
+// join()
+
+
+console.log(arr.join(" "));
+
+
+console.clear();
+
+
+// advance String()
+
+
+// charAt(), index --> value
+
+let str = "javAscript"
+
+console.log(str.charAt(1));
+
+
+
+
+// charCodeAt(), index --> asscii value
+
+console.log(str.charCodeAt(3));
+
+
+
+// length, 
+
+console.log(str.length);
+
+
+// slice,
+
+
+str = "javAscript"
+
+// console.log(str.slice(2,5));
+
+// // toUpperCase(), 
+
+// str = "javAscript"
+
+// console.log(str.toUpperCase());
+
+
+// // toLowerCase(), 
+
+// console.log(str.toLowerCase());
+
+
+// // trim(), 
+
+
+// str = " javA script "
+
+// console.log(str.trim()[0]);
+
+
+
+
+// // includes(),
+
+// str = "javAscript"
+
+// console.log(str.includes("c"));
+
+
+// // indexOf(), 
+
+// str = "javAscripts"
+
+
+// console.log(str.indexOf("s",5));
+
+
+// // replace(), 
+
+// str = "javAscriptjavA"
+// console.log(str.replaceAll("javA","python"));
+
+
+// // startsWith(), 
+// str = "javAscript"
+
+// console.log(str.startsWith("j"));
+
+// // endsWith()
+
+// console.log(str.endsWith("t"));
+
+
+// // split(),
+
+// let str1 = "spider-man"
+
+// console.log(str1.split("id"));
+
+
+// console.clear();
+
+
+
+
+
+// // // // date
+
+
+// let data1 =new Date()
+
+// console.log(data1);
+
+
+// // seprate  - get()
+
+
+// // year
+
+// console.log(data1.getFullYear());
+
+
+// // month
+
+// console.log(data1.getMonth());
+
+// let month = ["jan","feb","mar","apr","may","june","july","aug","sep","oct","nov","dec"]
+
+// console.log(month[data1.getMonth()]);
+
+
+
+// // date
+
+// console.log(data1.getDate());
+
+// // day
+
+// console.log(data1.getDay());
+
+
+// // hour
+
+// console.log(data1.getHours());
+
+// // minutes
+
+// console.log(data1.getMinutes());
+
+
+// // seconds
+
+// console.log(data1.getSeconds());
+
+
+
+// // set
+
+
+
+// data1.setFullYear(2003)
+
+// data1.setDate(30)
+
+// data1.setMonth(0)
+
+// data1.setHours(15)
+
+// data1.setMinutes(15)
+
+// data1.setSeconds(15)
+
+
+
+
+
+// console.log(data1);
+
+
+// console.clear();
+
+
+
+
+// // // // asynchronous
+
+
+// // setTimeout 
+
+
+
+// setTimeout(()=>{
+//     console.log("welcome");
+    
+// },2000)
+
+
+
+
+// // setInterval 
+
+// let newInterval = setInterval(()=>{
+//     console.log("jgjhgjhg");
+    
+// },1000)
+
+// setTimeout(()=>{
+//     clearInterval(newInterval)
+// },6000)
+
+
+
+// // example 
+
+
+// function one(){
+//     console.log("one");
+    
+// }
+
+// function two(){
+//     console.log("two");
+    
+// }
+
+// function three(){
+//     console.log("three");
+    
+// }
+
+// one()
+// setTimeout(two,0)
+// three()
 
 
 
@@ -1300,19 +1683,50 @@ console.log(jd.reverse());
 
 
 
+// // promise
+
+
+// // API - application pragrammable interface
 
 
 
+// // 1. resolve - success data - then()
+
+// // 2. reject  - error data   - catch()
+
+// // 3. bending - coming data  - finally()
+console.clear();
 
 
-
-// // // date
-
+let api = "https://fakestoreapi.com/products"
 
 
+fetch(api).then((dataStore)=>{
+    
+    
+    return dataStore.json()
+
+    // json to js = json()
+    // js   to json = stringify()
+    
+})
+
+.then((jsData)=>{
+    jsData.forEach((c,i,t)=>{
+        console.log(c.title);
+        
+    })
+    
+})
+
+.catch((errorData)=>{
+    console.warn(errorData.message);
+    
+})
+
+.finally(()=>{
+    console.log("api called successfully");
+    
+})
 
 
-
-
-
-// // // asynchronous
